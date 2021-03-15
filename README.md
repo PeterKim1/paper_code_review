@@ -18,5 +18,11 @@
 
    code detail review: https://cumulu-s.tistory.com/23
 
-   
+
+
+2. Auto-Encoding Variational Bayes(VAE)
+
+   paper review: https://cumulu-s.tistory.com/24
+
+   code detail review: https://cumulu-s.tistory.com/25
 
