@@ -4,9 +4,7 @@
 
 ### * VAE Main architecture
 
-
-
-'''
+<br/>
 
 ```python
 # VAE model
@@ -44,13 +42,13 @@ class VAE(nn.Module):
         return self.decode(z), mu, logvar
 ```
 
-'''
+
 
 
 
 ### * Loss Graphs
 
-
+<br/>
 
 1. Train
 
@@ -58,19 +56,27 @@ class VAE(nn.Module):
 
 ![image](https://user-images.githubusercontent.com/57930520/111147618-06df8080-85ce-11eb-999c-aa6b2a8bb4be.png)
 
+<br/>
 
+<br/>
 
 2. Test
 
+<br/>
 
+<br/>
 
 ![image](https://user-images.githubusercontent.com/57930520/111147726-224a8b80-85ce-11eb-94d3-805d845e162d.png)
 
+<br/>
 
+<br/>
 
 ### * Experiment Results
 
+<br/>
 
+<br/>
 
 50 epoch동안 학습이 완료된 후, 위 : 실제 데이터 / 아래: 실제 데이터가 VAE model의 input으로 들어갔을 때 reconstruction 된 이미지
 
@@ -78,11 +84,15 @@ class VAE(nn.Module):
 
 ![image](https://user-images.githubusercontent.com/57930520/111147948-65a4fa00-85ce-11eb-8566-f259c77af27b.png)
 
+<br/>
 
+<br/>
 
 
 
 50 epoch동안 학습이 완료된 후, (64, 2)차원의 표준 정규 분포 데이터가 VAE model로 들어갔을 때 generated된 이미지 
+
+<br/>
 
 
 
