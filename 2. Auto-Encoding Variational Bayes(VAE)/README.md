@@ -56,6 +56,14 @@ class VAE(nn.Module):
 
 <br/>
 
+첫 번째: Loss의 KL-Divergence term
+
+두 번째: Loss의 Reconstruction Error term
+
+세 번째: Total Loss
+
+<br/>
+
 <br/>
 
 ![image](https://user-images.githubusercontent.com/57930520/111147618-06df8080-85ce-11eb-999c-aa6b2a8bb4be.png)
@@ -65,6 +73,14 @@ class VAE(nn.Module):
 <br/>
 
 2. Test
+
+<br/>
+
+첫 번째: Loss의 KL-Divergence term
+
+두 번째: Loss의 Reconstruction Error term
+
+세 번째: Total Loss
 
 <br/>
 
