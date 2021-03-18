@@ -92,7 +92,7 @@ class VAE(nn.Module):
 
 <br/>
 
-![image-20210318232046435](C:\Users\KDH\AppData\Roaming\Typora\typora-user-images\image-20210318232046435.png)
+![image](https://user-images.githubusercontent.com/57930520/111648081-61831180-8846-11eb-98b3-2626ba8b3655.png)
 
 <br/>
 
