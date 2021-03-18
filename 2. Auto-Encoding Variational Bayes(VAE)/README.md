@@ -66,7 +66,7 @@ class VAE(nn.Module):
 
 <br/>
 
-![image](https://user-images.githubusercontent.com/57930520/111147618-06df8080-85ce-11eb-999c-aa6b2a8bb4be.png)
+![image](https://user-images.githubusercontent.com/57930520/111641422-7c528780-8840-11eb-9cf8-4d3ee08af467.png)
 
 <br/>
 
@@ -86,7 +86,7 @@ class VAE(nn.Module):
 
 <br/>
 
-![image](https://user-images.githubusercontent.com/57930520/111147726-224a8b80-85ce-11eb-94d3-805d845e162d.png)
+![image-20210318232046435](C:\Users\KDH\AppData\Roaming\Typora\typora-user-images\image-20210318232046435.png)
 
 <br/>
 
