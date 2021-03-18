@@ -134,7 +134,7 @@ class VAE(nn.Module):
 
 
 
-
+<br/><br/>
 
 ### 2. latent dimension = 100, training epochs = 100 epochs
 
@@ -156,7 +156,7 @@ class VAE(nn.Module):
 
 ![image](https://user-images.githubusercontent.com/57930520/111641896-eff49480-8840-11eb-8f88-c8959ce27462.png)
 
-
+<br/><br/>
 
 ### 3. latent dimension = 200, training epoch = 100 epochs
 
@@ -172,7 +172,7 @@ class VAE(nn.Module):
 
 <br/><br/>
 
-100 epoch동안 학습이 완료된 후, (64, 100)차원의 표준 정규 분포 데이터가 VAE model로 들어갔을 때 generated된 이미지 
+100 epoch동안 학습이 완료된 후, (64, 200)차원의 표준 정규 분포 데이터가 VAE model로 들어갔을 때 generated된 이미지 
 
 <br/><br/>
 
