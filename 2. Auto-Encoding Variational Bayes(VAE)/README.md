@@ -4,7 +4,7 @@
 
 
 
-## VAE Main architecture
+## 1. VAE Main architecture
 
 
 
@@ -50,7 +50,7 @@ class VAE(nn.Module):
 
 
 
-## Loss Graphs
+## 2. Loss Graphs
 
 
 
@@ -58,7 +58,9 @@ class VAE(nn.Module):
 
 <br/>
 
-1. Train
+### 2.1. Train
+
+
 
 <br/>
 
@@ -78,7 +80,9 @@ class VAE(nn.Module):
 
 <br/>
 
-2. Test
+### 2.2. Test
+
+
 
 <br/>
 
@@ -100,7 +104,7 @@ class VAE(nn.Module):
 
 
 
-## Experiment Results
+## 3. Experiment Results
 
 
 
@@ -108,7 +112,7 @@ class VAE(nn.Module):
 
 <br/>
 
-###     1. latent dimension = 2, training epochs = 50 epochs
+###     3.1. latent dimension = 2, training epochs = 50 epochs
 
 <br/>
 
@@ -136,7 +140,7 @@ class VAE(nn.Module):
 
 <br/><br/>
 
-### 2. latent dimension = 100, training epochs = 100 epochs
+### 3.2. latent dimension = 100, training epochs = 100 epochs
 
 <br/><br/>
 
@@ -158,7 +162,7 @@ class VAE(nn.Module):
 
 <br/><br/>
 
-### 3. latent dimension = 200, training epoch = 100 epochs
+### 3.3. latent dimension = 200, training epoch = 100 epochs
 
 <br/><br/>
 
@@ -180,12 +184,48 @@ class VAE(nn.Module):
 
 
 
-## 느낀점
+<br/>
 
-- KL Divergence가 increase되는 현상을 해결하고 싶었는데 구글에서 마땅히 자료를 찾지 못해서 해결을 못함
+<br/>
+
+## 4. Latent space visualization
+
+### 4.1. 2-D visualization 10000 MNIST test image made by trained VAE
+
+<br/>
+
+latent space를 2차원으로 두고 학습된 VAE를 가지고 10000개의 test image를 encoding 했을 때 얻어진 결과를 시각화
+
+<br/>
+
+![image](https://user-images.githubusercontent.com/57930520/111756807-fc7afa80-88dd-11eb-842d-bf8e5005081e.png)
+
+<br/>
+
+### 4.2. From random variable To image made by trained VAE
+
+<br/>
+
+학습된 VAE를 가지고 (-3, -3)부터 (3, 3)까지 균등한 간격으로 숫자를 만들어내서 총 400가지 값을 학습이 완료된 VAE에 투입했을 때 만들어지는(decoding) 이미지들을 시각화
+
+<br/>
+
+![image](https://user-images.githubusercontent.com/57930520/111757649-e457ab00-88de-11eb-8992-9b068b4350f8.png)
+
+
+
+## 5. 느낀점
+
+- KL Divergence가 increase되는 현상을 해결하고 싶었는데 구글에서 마땅히 자료를 찾지 못해서 해결을 못함(혹시나 추후 해결방법을 알게 되면 수정할 예정이다. 살다보면 언젠가 알 수 있게 되지 않을까?)
 - 일단 Total Loss가 줄어들었으니 수렴한 것 같기는 하다.
-- Auto-Encoder 구조에서 핵심이라고 보여지는 latent dimension을 다양하게 바꿔보면서 실험해본 결과, 확실히 latent dimension이 너무 적으면 별로인 것 같다. 충분한 수의 latent dimension을 주는게 중요해 보인다.
+- Auto-Encoder 구조에서 핵심이라고 보여지는 latent dimension을 다양하게 바꿔보면서 실험해본 결과, 확실히 latent dimension이 너무 적으면 별로인 것 같다. 충분한 수의 latent dimension을 주는게 중요해 보인다.(Auto-encoder 구조는 고차원의 데이터를 저차원으로 데이터를 꾸겨넣는 것인데 더 낮은 차원으로 꾸겨넣을수록 데이터가 날라가기 때문에 성능의 차이를 가져오는 것인게 아닐까 싶다.)
 - latent dimension이 2 일 때와 100일 때, 200일 때를 비교해보면 2보다는 100이 훨씬 좋지만, 100과 200인 경우를 비교해보면 크게 엄청 차이가 난다고 느껴지진 않는다. 즉, latent dimension은 어느 임계점 정도로 올리면 이보다 낮은 값일 때에 비해서 성능이 좋아지지만, 그 이후에는 크게 성능에 영향을 주지 않는 것 같다.
+- VAE가 학습한 잠재 공간(latent space)을 시각화하는 코드를 찾으려고 엄청 애쓰다가 코드를 다 짜고 나서 몇 일 후에 발견해 추가했다. (사실 이 코드를 짜고 깃헙에 올리는 시점에 시각화 코드를 찾으려고 애쓰다가 결국 못 찾아서 그냥 올렸는데 추후에 발견한 것이다.)
+- Test image 10000개에 대해서 시각화한 결과를 봤을 때는 다른 라벨을 가진 데이터들을 ''완전하게'' 분리되는 공간으로 학습하지 못하는 것을 확인하였다. 
+- 즉, 물과 기름이 나눠지듯이 각 클래스에 해당하는 데이터들이 2-d 공간으로 mapping 되었을 때 서로 완전히 구별된다면 좋을탠데 그렇게 하지 못함을 확인하였다.
+- (-3, -3)부터 (3, 3)까지 각 축을 기준으로 20개씩 균등하게 뽑아 학습된 VAE에 투입하였을 때 얻어지는 결과를 보니 latent space에 무언가 패턴이 있지 않을까 라는 생각을 할 수 있게 되었다.
+- 예를 들면, 시각화 결과에서 좌하단은 기울기가 양수인 선형 직선과 같은 모양인데 이는 투입된 값이 (-3, -3)이며 우하단은 일직선으로 세워진 1의 모양을 하고 있다. 이는 투입된 값이 (-3, 3)인 위치이다. 
+- 이 결과만 놓고 유추해보자면, (x, y) 중 y의 값이 커질수록 숫자가 일직선으로 세워진다고 유추해볼 수 있다. 물론 다른 row의 결과를 보면 숫자가 바뀌기도 하지만, 어쨋든 기울어진 모양에서 세워진 모양으로 바뀌는 패턴은 얼추 들어맞는 것 같다.
 
 
 
