@@ -31,3 +31,5 @@
 3. Adversarial Autoencoders(AAE)
 
    paper review: https://cumulu-s.tistory.com/26
+   
+   code detail review: https://cumulu-s.tistory.com/27
