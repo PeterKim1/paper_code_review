@@ -123,7 +123,7 @@ Blue line : average generator loss per epoch
 
 <br/>
 
-## ![img](https://blog.kakaocdn.net/dn/basbzw/btq0XQLa9A4/jFOTFIXNC1r3kPHzU3Z3HK/img.gif)
+## ![result2021-03-25-14_11_short](https://user-images.githubusercontent.com/57930520/112485122-ed081f80-8dbd-11eb-8bd9-29c846461d67.gif)
 
 <br/>
 
