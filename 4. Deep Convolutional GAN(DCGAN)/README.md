@@ -143,9 +143,13 @@ Blue line : average generator loss per epoch
 
 
 
-(1, 100) 차원의 Gaussian noise vector 2개를 가지고 두 vector를 interpolate해서 만들어진 vector를 학습이 완료된 generator에 넣었을 때 얻게 되는 결과
+(1, 100) 차원의 Gaussian noise vector 2개를 가지고 두 vector를 interpolate해서 만들어진 vector를 학습이 완료된 generator에 넣었을 때 얻게 되는 결과.
+
+random variable이 어떻게 만들어지는지에 따라 다른 결과를 얻게 됩니다. 
 
  <br/>
+
+(첫 번째)
 
 ![latent2](https://user-images.githubusercontent.com/57930520/112483299-3d7e7d80-8dbc-11eb-8fc8-d5d9a20ab26f.png)
 
@@ -155,9 +159,15 @@ Blue line : average generator loss per epoch
 
 <br/>
 
+<br/>
 
+(두 번째)
 
+![latent1](https://user-images.githubusercontent.com/57930520/112589617-c3dea200-8e44-11eb-9f48-944e50583325.png)
 
+<br/>
+
+<br/>
 
 # 5. 느낀점
 
