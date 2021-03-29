@@ -86,3 +86,13 @@ Blue line: Average Discriminator loss per epoch
 
 <br/>
 
+Gaussian noise (10, 100)을 고정해두고, 이를 각 epoch 별로 학습된 Generator를 가지고 이미지를 생성하였을 때 만들어지는 이미지로 만든 gif입니다.
+
+
+
+![GAN_result_short_2](https://user-images.githubusercontent.com/57930520/112816337-40c78100-90bc-11eb-86ad-8408c2ddd0ac.gif)
+
+
+
+
+

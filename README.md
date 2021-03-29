@@ -39,3 +39,5 @@
 4. Unsupervised Representation Learning With Deep Convolutional Generatie Adversarial Networks (DCGAN)
 
    paper review: https://cumulu-s.tistory.com/28
+   
+   code detail review: https://cumulu-s.tistory.com/30
