@@ -2,7 +2,6 @@
 
 <br/>
 
-* 2021-03-31 일부 code 및 결과가 변경되었습니다. README 추가 예정입니다 ㅠㅠㅠ
 * It includes 32x32 MNIST / 32x32 FashionMNIST / 64x64 FashionMNIST experiment result.
 
 <br/>
@@ -237,9 +236,33 @@ Blue Line: Discriminator loss
 
 <br/>
 
-(추가 예정, 변경 진행중)
+고정된 (16, 100, 1, 1)의 latent vector를 만든 후, 학습이 진행됨에 따라서 latent vector가 어떤 그림으로 바뀌는지를 gif로 만든 결과입니다.
+
+
+
+### 3.1 32x32 Fashion MNIST Dataset
+
+![result2021-03-31-10_44_1](https://user-images.githubusercontent.com/57930520/113480586-f422e200-94cf-11eb-90dc-af3b7a8828dc.gif)
+
+
 
 <br/>
+
+
+
+### 3.2 32x32 MNIST Dataset
+
+![result2021-03-31-13_17_1](https://user-images.githubusercontent.com/57930520/113480663-7dd2af80-94d0-11eb-9b5f-45d351169ec6.gif)
+
+<br/>
+
+
+
+### 3.3 64x64 Fashion MNIST Dataset
+
+![result2021-04-01-00_47_1](https://user-images.githubusercontent.com/57930520/113480740-defa8300-94d0-11eb-8c32-f17a81656724.gif)
+
+
 
 <br/>
 
@@ -259,19 +282,51 @@ Blue Line: Discriminator loss
 
 
 
-(추가 예정, 변경 진행중)
+### 4.1.1 32x32 Fashion MNIST Dataset
+
+(1) 옷이 신발로 변함
+
+![latent1 (1)](https://user-images.githubusercontent.com/57930520/113480886-a60ede00-94d1-11eb-8676-7dfb47a06e0c.png)
+
+
+
+(2) 신발이 가방으로 변함
+
+![latent2](https://user-images.githubusercontent.com/57930520/113480959-fc7c1c80-94d1-11eb-9216-f6ca44c749a9.png)
 
  <br/>
 
+<br/>
+
+### 4.1.2 32x32 MNIST Dataset
+
+(1) 0이 1로 변함
+
+![latent3](https://user-images.githubusercontent.com/57930520/113481019-3816e680-94d2-11eb-904a-e76b09b22e49.png)
 
 
 
+(2) 3이 5로 변함
+
+![latent4](https://user-images.githubusercontent.com/57930520/113481037-4cf37a00-94d2-11eb-983b-154765942f1c.png)
 
 
 
 <br/>
 
 <br/>
+
+### 4.1.3 64x64 Fashion MNIST Dataset
+
+(1) 신발이 바지로 변함
+
+![latent5](https://user-images.githubusercontent.com/57930520/113481125-bb383c80-94d2-11eb-8e9b-d8d489e8d94f.png)
+
+
+
+(2) 바지가 상의로 변함
+
+![latent6](https://user-images.githubusercontent.com/57930520/113481165-efabf880-94d2-11eb-9db2-3a4d2b57bd66.png)
 
 
 
@@ -281,4 +336,7 @@ Blue Line: Discriminator loss
 
 # 5. 느낀점
 
-* (추가 예정, 변경 진행중)
+* 기존에 있던 코드를 전부 밀고, 결과가 잘 나오는 코드를 찾아서 수정했다.
+* 64x64 MNIST 결과까지 다 만들어서 올리고 싶었는데, 없는 이유는 동일한 코드를 사용했음에도 64x64 MNIST의 경우는 학습이 안 되었기 때문이다.
+* 코드를 완전히 똑같이 가져갔는데 데이터셋만 바뀌었음에도 적절하게 학습되지 못했다는 것은 그만큼 GAN의 학습이 까다롭다는 것을 의미하는 것 같다.
+* 이렇게 학습이 어렵기 때문에 많은 연구자들이 GAN을 조금 더 안정적이고 잘 학습할 수 있도록 많은 연구들을 진행해왔으니 앞으로 그런 논문들을 계속해서 공부해볼 예정이다. 
