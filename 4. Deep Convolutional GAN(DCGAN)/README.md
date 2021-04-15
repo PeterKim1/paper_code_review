@@ -260,7 +260,9 @@ Blue Line: Discriminator loss
 
 ### 3.3 64x64 Fashion MNIST Dataset
 
-![result2021-04-01-00_47_1](https://user-images.githubusercontent.com/57930520/113480740-defa8300-94d0-11eb-8c32-f17a81656724.gif)
+![result2021-04-01-00_47_1](https://user-images.githubusercontent.com/57930520/114859751-244e7700-9e26-11eb-9632-6b67966249fd.gif)
+
+
 
 
 

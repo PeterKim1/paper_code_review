@@ -41,3 +41,9 @@
    paper review: https://cumulu-s.tistory.com/28
    
    code detail review: https://cumulu-s.tistory.com/30
+
+
+
+5. Wasserstein GAN (WGAN)
+
+​       paper review: https://cumulu-s.tistory.com/31
