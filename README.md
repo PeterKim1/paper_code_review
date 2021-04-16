@@ -46,4 +46,4 @@
 
 5. Wasserstein GAN (WGAN)
 
-​       paper review: https://cumulu-s.tistory.com/31
+   paper review: https://cumulu-s.tistory.com/31
