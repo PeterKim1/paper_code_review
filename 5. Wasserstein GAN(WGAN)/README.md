@@ -79,7 +79,7 @@ class Discriminator(torch.nn.Module):
         self.output = nn.Sequential(
             nn.Conv2d(in_channels=1024, out_channels=1, kernel_size=4, stride=1, padding=0),
             # Output 1
-            nn.Sigmoid())
+        )
 
     def forward(self, x):
         x = self.main_module(x)
@@ -101,19 +101,13 @@ Second: Wasserstein estimate (Discriminator loss)
 
 Third: loss per epoch (Red Line: Generator loss / Blue Line: Wasserstein estimate)
 
-![image](https://user-images.githubusercontent.com/57930520/114984933-2e778080-9ecd-11eb-915e-1f5341dd8522.png)
+![image](https://user-images.githubusercontent.com/57930520/114997404-c0d25100-9eda-11eb-9449-f683bd9462ea.png)
 
 <br/>
 
 해당 실험에서는 weight clipping의 값을 논문과는 다르게 0.005로 주었는데, 이는 논문의 값인 0.01로 적용하였을 때 Wasserstein estimate가 하향하는 곡선으로 결과가 나오지 않았기 때문입니다.
 
 
-
-아래의 loss graph는 weight clipping을 0.01로 적용했을 때의 실험 결과를 나타냅니다.
-
-
-
-![image](https://user-images.githubusercontent.com/57930520/114985208-81513800-9ecd-11eb-8163-037c4284e253.png)
 
 
 
@@ -127,7 +121,7 @@ Third: loss per epoch (Red Line: Generator loss / Blue Line: Wasserstein estimat
 
 
 
-![result_3](https://user-images.githubusercontent.com/57930520/114985383-b3fb3080-9ecd-11eb-8dee-b0ce9c9e4b22.gif)
+![result_5](https://user-images.githubusercontent.com/57930520/114997653-0abb3700-9edb-11eb-8d68-5cffccb3bd4a.gif)
 
 
 
