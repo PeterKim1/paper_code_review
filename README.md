@@ -47,3 +47,11 @@
 5. Wasserstein GAN (WGAN)
 
    paper review: https://cumulu-s.tistory.com/31
+   
+   code detail review: https://cumulu-s.tistory.com/32
+
+
+
+6. Deep Residual Learning for Image Recognition(ResNet)
+
+   paper review: https://cumulu-s.tistory.com/33
