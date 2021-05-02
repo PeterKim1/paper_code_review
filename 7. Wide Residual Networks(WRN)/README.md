@@ -97,9 +97,13 @@ class WideResNet(nn.Module):
 
 ### 1.2 WRN-40-2
 
-![image](https://user-images.githubusercontent.com/57930520/116696109-6cf85980-a9fc-11eb-9108-fd53ea4ac46e.png)
+![image](https://user-images.githubusercontent.com/57930520/116812848-d5297580-ab8b-11eb-94e6-563e0fdd52f1.png)
 
 <br/>
+
+### 1.3 WRN-16-8
+
+![image](https://user-images.githubusercontent.com/57930520/116812869-fa1de880-ab8b-11eb-8e5a-b7df982fe2fd.png)
 
 
 
@@ -120,6 +124,12 @@ class WideResNet(nn.Module):
 
 <br/>
 
+### 2.2 WRN-16-8
+
+![image](https://user-images.githubusercontent.com/57930520/116812802-93003400-ab8b-11eb-960a-a000e33eec5c.png)
+
+
+
 <br/>
 
 
@@ -137,7 +147,7 @@ class WideResNet(nn.Module):
 | Network Architecture | Top Test Accuracy | Epoch when reach to Top Test Accuracy |
 | -------------------- | ----------------- | ------------------------------------- |
 | WRN-40-2             | 95.22%            | 185 epoch                             |
-|                      |                   |                                       |
+| WRN-16-8             | 95.65%            | 199 epoch                             |
 
 <br/>
 
