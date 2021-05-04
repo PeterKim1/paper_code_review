@@ -12,7 +12,7 @@
 
 
 
-1. Generative Adversarial Nets(GAN)
+1. Generative Adversarial Nets(GAN)(2014)
 
    paper review : https://cumulu-s.tistory.com/22
 
@@ -20,7 +20,7 @@
 
 
 
-2. Auto-Encoding Variational Bayes(VAE)
+2. Auto-Encoding Variational Bayes(VAE)(2013)
 
    paper review: https://cumulu-s.tistory.com/24
 
@@ -28,7 +28,7 @@
 
 
 
-3. Adversarial Autoencoders(AAE)
+3. Adversarial Autoencoders(AAE)(2015)
 
    paper review: https://cumulu-s.tistory.com/26
    
@@ -36,7 +36,7 @@
 
 
 
-4. Unsupervised Representation Learning With Deep Convolutional Generatie Adversarial Networks (DCGAN)
+4. Unsupervised Representation Learning With Deep Convolutional Generatie Adversarial Networks (DCGAN)(2015)
 
    paper review: https://cumulu-s.tistory.com/28
    
@@ -44,7 +44,7 @@
 
 
 
-5. Wasserstein GAN (WGAN)
+5. Wasserstein GAN (WGAN)(2017)
 
    paper review: https://cumulu-s.tistory.com/31
    
@@ -52,7 +52,7 @@
 
 
 
-6. Deep Residual Learning for Image Recognition(ResNet)
+6. Deep Residual Learning for Image Recognition(ResNet)(2015)
 
    paper review: https://cumulu-s.tistory.com/33
    
@@ -60,7 +60,7 @@
 
 
 
-7. Wide Residual Networks(WRN)
+7. Wide Residual Networks(WRN)(2016)
 
    paper review:  https://cumulu-s.tistory.com/35
 
