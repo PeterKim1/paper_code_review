@@ -55,3 +55,13 @@
 6. Deep Residual Learning for Image Recognition(ResNet)
 
    paper review: https://cumulu-s.tistory.com/33
+   
+   code detail review: https://cumulu-s.tistory.com/34
+
+
+
+7. Wide Residual Networks(WRN)
+
+   paper review:  https://cumulu-s.tistory.com/35
+
+   code detail review: https://cumulu-s.tistory.com/36
