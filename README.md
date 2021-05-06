@@ -14,54 +14,40 @@
 
 1. Generative Adversarial Nets(GAN)(2014)
 
-   paper review : https://cumulu-s.tistory.com/22
+   [paper review](https://cumulu-s.tistory.com/22) / [code review](https://cumulu-s.tistory.com/23)
 
-   code detail review: https://cumulu-s.tistory.com/23
-
-
+   
 
 2. Auto-Encoding Variational Bayes(VAE)(2013)
 
-   paper review: https://cumulu-s.tistory.com/24
-
-   code detail review: https://cumulu-s.tistory.com/25
+   [paper review](https://cumulu-s.tistory.com/24) / [code review](https://cumulu-s.tistory.com/25)
 
 
 
 3. Adversarial Autoencoders(AAE)(2015)
 
-   paper review: https://cumulu-s.tistory.com/26
-   
-   code detail review: https://cumulu-s.tistory.com/27
+   [paper review](https://cumulu-s.tistory.com/26) / [code review](https://cumulu-s.tistory.com/27)
 
 
 
 4. Unsupervised Representation Learning With Deep Convolutional Generatie Adversarial Networks (DCGAN)(2015)
 
-   paper review: https://cumulu-s.tistory.com/28
-   
-   code detail review: https://cumulu-s.tistory.com/30
+   [paper review](https://cumulu-s.tistory.com/28) / [code review](https://cumulu-s.tistory.com/30)
 
 
 
 5. Wasserstein GAN (WGAN)(2017)
 
-   paper review: https://cumulu-s.tistory.com/31
-   
-   code detail review: https://cumulu-s.tistory.com/32
+   [paper review](https://cumulu-s.tistory.com/31) / [code review](https://cumulu-s.tistory.com/32)
 
 
 
 6. Deep Residual Learning for Image Recognition(ResNet)(2015)
 
-   paper review: https://cumulu-s.tistory.com/33
-   
-   code detail review: https://cumulu-s.tistory.com/34
+   [paper review](https://cumulu-s.tistory.com/33) / [code review](https://cumulu-s.tistory.com/34)
 
 
 
 7. Wide Residual Networks(WRN)(2016)
 
-   paper review:  https://cumulu-s.tistory.com/35
-
-   code detail review: https://cumulu-s.tistory.com/36
+   [paper review](https://cumulu-s.tistory.com/35) / [code review](https://cumulu-s.tistory.com/36)
