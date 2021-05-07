@@ -101,6 +101,46 @@ Class_Activation_Map.ipynb에서 조절할 수 있는 주요한 hyperparameter�
 
 
 
+# 5. Experiment examples
+
+
+
+(Original / Class Activation Map / Original + Class Activation Map + patch로 구성하였습니다.)
+
+
+
+![img1.png](https://github.com/PeterKim1/paper_code_review/blob/master/8.%20Learning%20Deep%20Features%20for%20Discriminative%20Localization(CAM)/Examples/img1.png?raw=true)
+
+![cam1.png](https://github.com/PeterKim1/paper_code_review/blob/master/8.%20Learning%20Deep%20Features%20for%20Discriminative%20Localization(CAM)/Examples/cam1.png?raw=true)
+
+![Result1.png](https://github.com/PeterKim1/paper_code_review/blob/master/8.%20Learning%20Deep%20Features%20for%20Discriminative%20Localization(CAM)/Examples/Result1.png?raw=true)
+
+
+
+![img2.png](https://github.com/PeterKim1/paper_code_review/blob/master/8.%20Learning%20Deep%20Features%20for%20Discriminative%20Localization(CAM)/Examples/img2.png?raw=true)
+
+![cam2.png](https://github.com/PeterKim1/paper_code_review/blob/master/8.%20Learning%20Deep%20Features%20for%20Discriminative%20Localization(CAM)/Examples/cam2.png?raw=true)
+
+![Result2.png](https://github.com/PeterKim1/paper_code_review/blob/master/8.%20Learning%20Deep%20Features%20for%20Discriminative%20Localization(CAM)/Examples/Result2.png?raw=true)
+
+
+
+![img3.png](https://github.com/PeterKim1/paper_code_review/blob/master/8.%20Learning%20Deep%20Features%20for%20Discriminative%20Localization(CAM)/Examples/img3.png?raw=true)
+
+![cam3.png](https://github.com/PeterKim1/paper_code_review/blob/master/8.%20Learning%20Deep%20Features%20for%20Discriminative%20Localization(CAM)/Examples/cam3.png?raw=true)
+
+![Result3.png](https://github.com/PeterKim1/paper_code_review/blob/master/8.%20Learning%20Deep%20Features%20for%20Discriminative%20Localization(CAM)/Examples/Result3.png?raw=true)
+
+
+
+
+
+
+
+
+
+
+
 
 
 
