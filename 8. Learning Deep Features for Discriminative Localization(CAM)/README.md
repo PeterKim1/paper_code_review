@@ -75,7 +75,27 @@ Red Line: Test, Blue Line: Train
 
 
 
+# 4. Class Activation Map
 
+<br/>
+
+![image](https://user-images.githubusercontent.com/57930520/117415460-4d5cb600-af53-11eb-867b-2db932ec994c.png)
+
+
+
+논문에 나온 대로, GAP을 거친 후(현재 resnet18 기준 512차원) 마지막 의사결정인 binary classification을 할 때 사용한 가중치를 활용하여 Class Activation Map을 생성합니다.
+
+학습된 Baseline model weight를 이용하여 Class Activation Map을 사용할 수 있으며, 이는 Class_Activation_Map.ipynb 파일을 이용해서 생성할 수 있습니다.
+
+
+
+Class_Activation_Map.ipynb에서 조절할 수 있는 주요한 hyperparameter는 총 3개 입니다.
+
+
+
+1. num_result : 결과의 개수를 결정합니다.
+2. result = heatmap * a + img * b: 해당 코드에서는 a가 0.7, b가 0.5이지만 이를 조절하면 결과의 이미지의 모습이 약간 달라집니다. Weighted sum 형태 이므로, heatmap을 더 진하게 표현할지 image를 더 진하게 표현할지에 따라서 조절하시면 됩니다.
+3. props = generate_bbox(img, CAMs[0], CAMs[0].max()*a) : a는 Class Activation Map의 최대값에 대해 몇 %보다 높은 값을 갖고 bounding box를 만들지 결정합니다. a가 낮을 경우, image 사이즈와 동일한 bounding box를 만드므로 해당 방법의 의미를 잃게 되고, a가 높을 경우, 과하게 작은 형태의 bounding box를 만들게 되므로 개나 고양이의 매우 작은 부분만 포함하는 bounding box가 만들어질 수 있습니다. 해당 코드에서는 60%를 사용하였습니다.
 
 
 
