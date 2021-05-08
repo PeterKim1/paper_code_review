@@ -107,6 +107,12 @@ class WideResNet(nn.Module):
 
 
 
+### 1.4 WRN-16-10
+
+![image](https://user-images.githubusercontent.com/57930520/117536885-9a668800-b038-11eb-8c4b-48557eb417a0.png)
+
+
+
 
 
 
@@ -134,6 +140,14 @@ class WideResNet(nn.Module):
 
 
 
+### 2.3 WRN-16-10
+
+![image](https://user-images.githubusercontent.com/57930520/117536803-3217a680-b038-11eb-8b47-0acc00455867.png)
+
+
+
+
+
 # 3. Experiment Results
 
 <br/>
@@ -148,6 +162,7 @@ class WideResNet(nn.Module):
 | -------------------- | ----------------- | ------------------------------------- |
 | WRN-40-2             | 95.22%            | 185 epoch                             |
 | WRN-16-8             | 95.65%            | 199 epoch                             |
+| WRN-16-10            | 95.82%            | 175 epoch                             |
 
 <br/>
 
