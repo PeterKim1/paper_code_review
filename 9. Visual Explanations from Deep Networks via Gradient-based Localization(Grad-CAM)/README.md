@@ -56,7 +56,11 @@ left: Original image / center: Grad-CAM / right: Original image + Grad-CAM
 
 
 
+### Grad-CAM vs Class Activation Map
 
+![image](https://user-images.githubusercontent.com/57930520/117653530-78ebd480-b1cf-11eb-9cd7-2398e7c2c2a0.png)
+
+같은 그림에 대해서 CAM과 Grad-CAM을 그려보았을 때, 동일한 결과가 도출되는 것을 알 수 있습니다.
 
 
 
