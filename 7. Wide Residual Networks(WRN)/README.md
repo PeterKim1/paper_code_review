@@ -113,6 +113,12 @@ class WideResNet(nn.Module):
 
 
 
+### 1.5 WRN-40-4
+
+![image](https://user-images.githubusercontent.com/57930520/117987629-9f4b7480-b375-11eb-9b1c-ab9848d389ed.png)
+
+
+
 
 
 
@@ -144,7 +150,15 @@ class WideResNet(nn.Module):
 
 ![image](https://user-images.githubusercontent.com/57930520/117536803-3217a680-b038-11eb-8b47-0acc00455867.png)
 
+<br/>
 
+
+
+### 2.4 WRN-40-4
+
+![image](https://user-images.githubusercontent.com/57930520/117987311-53003480-b375-11eb-8cb2-4a090ed72eb3.png)
+
+<br/>
 
 
 
@@ -163,6 +177,7 @@ class WideResNet(nn.Module):
 | WRN-40-2             | 95.22%            | 185 epoch                             |
 | WRN-16-8             | 95.65%            | 199 epoch                             |
 | WRN-16-10            | 95.82%            | 175 epoch                             |
+| WRN-40-4             | 96.03%            | 176 epoch                             |
 
 <br/>
 
