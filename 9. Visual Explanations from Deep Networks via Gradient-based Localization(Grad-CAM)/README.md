@@ -8,15 +8,19 @@
 
 
 
-# Pre-trained Grad-CAM
+# 2. Pre-trained Grad-CAM(just Grad-CAM)
 
 ImageNet Pre-trained resnet18을 사용하여 Grad-CAM을 생성합니다.
 
 Grad-CAM_pretrained.ipynb 파일을 통해 구현하실 수 있습니다.
 
+해당 코드는 image를 입력 받았을 때, Pre-trained resnet18 weight를 이용해 classification을 진행하고 이에 대한 Grad-CAM heatmap 및 Grad-CAM + image를 만들어줍니다.
+
+이번 section에서는 다양한 layer에서 추출된 feature map을 통해서 Grad-CAM을 만들어보고 어떤 차이가 있는지를 확인합니다.
 
 
-### Grad-CAM made by last conv layer
+
+### 2.1 Grad-CAM made by last conv layer
 
 left: Original image / center: Grad-CAM / right: Original image + Grad-CAM
 
@@ -24,7 +28,7 @@ left: Original image / center: Grad-CAM / right: Original image + Grad-CAM
 
 <br/>
 
-### Grad-CAM made by third conv layer
+### 2.2 Grad-CAM made by third conv layer
 
 left: Original image / center: Grad-CAM / right: Original image + Grad-CAM
 
@@ -32,7 +36,7 @@ left: Original image / center: Grad-CAM / right: Original image + Grad-CAM
 
 <br/>
 
-### Grad-CAM made by second conv layer
+### 2.3 Grad-CAM made by second conv layer
 
 left: Original image / center: Grad-CAM / right: Original image + Grad-CAM
 
@@ -40,7 +44,7 @@ left: Original image / center: Grad-CAM / right: Original image + Grad-CAM
 
 <br/>
 
-### Grad-CAM made by first conv layer
+### 2.4 Grad-CAM made by first conv layer
 
 left: Original image / center: Grad-CAM / right: Original image + Grad-CAM
 
@@ -56,11 +60,21 @@ left: Original image / center: Grad-CAM / right: Original image + Grad-CAM
 
 
 
-### Grad-CAM vs Class Activation Map
+# 3. Pre-trained Grad-CAM(with Guided Backprop)
 
-![image](https://user-images.githubusercontent.com/57930520/117653530-78ebd480-b1cf-11eb-9cd7-2398e7c2c2a0.png)
+ImageNet Pre-trained resnet50을 사용하여 Grad-CAM을 생성합니다.
 
-같은 그림에 대해서 CAM과 Grad-CAM을 그려보았을 때, 동일한 결과가 도출되는 것을 알 수 있습니다.
+(resnet18로 결과를 확인해보면 생각보다 깔끔하게 고양이와 개가 분류되지 않아 resnet50을 사용하였습니다. 코드에서 모델의 종류를 resnet18으로 변경하여도 구동에는 문제가 없습니다.)
+
+
+
+
+
+
+
+
+
+
 
 
 
