@@ -4,7 +4,29 @@
 
 <br/>
 
-수정 진행중
+Cat vs Dog dataset을 이용해서 만들어진 Grad-CAM과 pre-trained된 weight를 이용한 resnet을 통해 만들어진 Grad-CAM을 만들어봅니다.
+
+<br/>
+
+# 1. Grad-CAM(CatVsDog dataset)
+
+Cat vs Dog dataset을 사용하는 것과 관련한 설명은 [CAM](https://github.com/PeterKim1/paper_code_review/tree/master/8.%20Learning%20Deep%20Features%20for%20Discriminative%20Localization(CAM)) 에 올린 내용들을 참고해주세요.
+
+해당 데이터셋을 이용하여 학습된 resnet18을 사용하여 Grad-CAM을 생성합니다.
+
+[Grad-CAM(CatVsDog dataset).ipynb](https://github.com/PeterKim1/paper_code_review/blob/master/9.%20Visual%20Explanations%20from%20Deep%20Networks%20via%20Gradient-based%20Localization(Grad-CAM)/Grad-CAM(CatVsDog%20dataset).ipynb) 파일을 통해 구현하실 수 있습니다.
+
+
+
+left: original image / center: Grad-CAM heatmap / right: original image + Grad-CAM
+
+![image](https://user-images.githubusercontent.com/57930520/118354881-26802e80-b5a8-11eb-9102-a0e428b11c0e.png)
+
+![image](https://user-images.githubusercontent.com/57930520/118354930-6810d980-b5a8-11eb-879a-d855db6d9a33.png)
+
+
+
+
 
 
 
