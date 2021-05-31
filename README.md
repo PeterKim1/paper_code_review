@@ -30,7 +30,7 @@
 
 
 
-4. Unsupervised Representation Learning With Deep Convolutional Generatie Adversarial Networks (DCGAN)(2015)
+4. Unsupervised Representation Learning With Deep Convolutional Generative Adversarial Networks (DCGAN)(2015)
 
    [paper review](https://cumulu-s.tistory.com/28) / [code review](https://cumulu-s.tistory.com/30)
 
@@ -66,3 +66,6 @@
 
 
 
+10. Patch SVDD: Patch-level SVDD for Anomaly Detection and Segmentation(Patch SVDD)(2020)
+
+    [paper review](https://cumulu-s.tistory.com/42) / 
