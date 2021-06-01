@@ -81,7 +81,7 @@ Examples of saved weights ->   [here](https://github.com/PeterKim1/paper_code_re
 
 I changed the code related to saving weights, becuz I need to experiment several times with changing hyperparameters(lambda, epochs, etc...)
 
-Additionally, evaluation process takes a long time, so I exclude evaluation process [like this.](https://github.com/PeterKim1/paper_code_review/blob/master/10.%20Patch%20SVDD/main_train.py#L110)
+Additionally, evaluation process takes a long time, so I exclude evaluation process [like this.](https://github.com/PeterKim1/paper_code_review/blob/master/10.%20Patch%20SVDD/main_train.py#L105)
 
 <br/>
 
