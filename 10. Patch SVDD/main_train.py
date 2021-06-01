@@ -83,11 +83,6 @@ def train():
                 x, _, _ = d['pos_64']
                 num_instance += x.shape[0]
 
-                x1, _, _ = d['pos_32']
-                print('64 size: ', x.shape)
-                print('32 size: ', x1.shape)
-
-
                 d = to_device(d, 'cuda', non_blocking=True)
                 opt.zero_grad()
 
