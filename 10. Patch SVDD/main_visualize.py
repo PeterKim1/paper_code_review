@@ -7,6 +7,9 @@ from codes.utils import resize, makedirpath
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--obj', default='wood')
+parser.add_argument('--epochs', default=300, type=int)
+parser.add_argument('--lambda_value', default=1, type=float)
+parser.add_argument('--D', default=64, type=int)
 args = parser.parse_args()
 
 
@@ -47,7 +50,7 @@ def main():
     obj = args.obj
 
     enc = EncoderHier(K=64, D=64).cuda()
-    enc.load(obj)
+    enc.load(obj, args.epochs, args.lambda_value, args.D)
     enc.eval()
     results = eval_encoder_NN_multiK(enc, obj)
     maps = results['maps_mult']
