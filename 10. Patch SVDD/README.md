@@ -145,5 +145,24 @@ So, I add this.
 
 <br/>
 
+# 6. Performance
+
+|                                                   | K64 Det | K64 Seg | K32 Det | K32 Seg | Sum Det | Sum Seg | Mult Det | Mult Seg |
+| ------------------------------------------------- | ------- | ------- | ------- | ------- | ------- | ------- | -------- | -------- |
+| Bottle<br />Epoch_300<br />lambda_0.001<br />D_64 | 0.980   | 0.954   | 0.850   | 0.952   | 0.945   | 0.966   | 0.955    | 0.969    |
+| Bottle<br />Epoch_600<br />lambda_0.001<br />D_64 | 0.991   | 0.948   | 0.954   | 0.968   | 0.983   | 0.967   | 0.987    | 0.969    |
+
+<br/>
+
+In paper, `Bottle` class detection performance is 0.986, and segmentation performance is 0.981.
+
+But when I train Patch SVDD to `Bottle` class, det performance is 0.987, and seg performantion is 0.969.
+
+
+
+
+
+
+
 
 
