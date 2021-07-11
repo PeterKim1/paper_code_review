@@ -68,4 +68,11 @@
 
 10. Patch SVDD: Patch-level SVDD for Anomaly Detection and Segmentation(Patch SVDD)(2020)
 
-    [paper review](https://cumulu-s.tistory.com/42) / 
+    [paper review](https://cumulu-s.tistory.com/42) / [code review](https://cumulu-s.tistory.com/43)
+
+
+
+11. PaDiM: a Patch Distribution Modeling Framework for Anomaly Detection and Localization(2020)
+
+    [paper review](https://cumulu-s.tistory.com/44)
+
