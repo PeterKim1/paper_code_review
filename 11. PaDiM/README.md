@@ -75,69 +75,65 @@ python main.py --data_path='.../MVTec' --save_path='./mvtec_result' --arch='resn
 
 * Image-level anomaly detection result (AUROC)
 
-| MVTec AD class                                 | EfficientNet-B5<br />(This code)         | EfficientNet-B5<br />(Original Paper)    |
-| ---------------------------------------------- | ---------------------------------------- | ---------------------------------------- |
-| Carpet                                         | 1.0                                      | -                                        |
-| Grid                                           | 0.985                                    | -                                        |
-| Leather                                        | 1.0                                      | -                                        |
-| Tile                                           | 0.991                                    | -                                        |
-| Wood                                           | 0.976                                    | -                                        |
-| **All texture classes**                        | **0.9904**                               | **0.990**                                |
-| Bottle                                         | 1.0                                      | -                                        |
-| Cable                                          | 0.959                                    | -                                        |
-| Capsule                                        | 0.945                                    | -                                        |
-| Hazelnut                                       | 0.829                                    | -                                        |
-| Metal Nut                                      | 0.944                                    | -                                        |
-| Pill                                           | 0.970                                    | -                                        |
-| Screw                                          | 0.911                                    | -                                        |
-| Toothbrush                                     | 0.994                                    | -                                        |
-| Transistor                                     | 0.998                                    | -                                        |
-| Zipper                                         | 0.938                                    | -                                        |
-| **All object classes**                         | **0.9488**                               | **0.972**                                |
-| **<span style="color:red">All classes</span>** | **<span style="color:red">0.963</span>** | **<span style="color:red">0.979</span>** |
+| MVTec AD class          | EfficientNet-B5<br />(This code) | EfficientNet-B5<br />(Original Paper) |
+| ----------------------- | -------------------------------- | ------------------------------------- |
+| Carpet                  | 1.0                              | -                                     |
+| Grid                    | 0.984                            | -                                     |
+| Leather                 | 1.0                              | -                                     |
+| Tile                    | 0.992                            | -                                     |
+| Wood                    | 0.987                            | -                                     |
+| **All texture classes** | **0.9926**                       | **0.990**                             |
+| Bottle                  | 1.0                              | -                                     |
+| Cable                   | 0.973                            | -                                     |
+| Capsule                 | 0.956                            | -                                     |
+| Hazelnut                | 0.974                            | -                                     |
+| Metal Nut               | 0.980                            | -                                     |
+| Pill                    | 0.923                            | -                                     |
+| Screw                   | 0.927                            | -                                     |
+| Toothbrush              | 0.994                            | -                                     |
+| Transistor              | 1.0                              | -                                     |
+| Zipper                  | 0.954                            | -                                     |
+| **All object classes**  | **0.9681**                       | **0.972**                             |
+| **All classes**         | **0.9763**                       | **0.979**                             |
 
 <br/>
-
-In Image-level anomaly detection, all textures classes result is similar to original paper.
-
-But all objects classes result is different from original paper, It has 2.32% difference from original paper.
-
-So, All classes result has 1.6% difference from original paper.
 
 <br/>
 
 * Pixel-level anomaly localization result (AUROC)
 
-| MVTec AD class                                 | EfficientNet-B5<br />(This code)         | EfficientNet-B5<br />(Original Paper) |
-| ---------------------------------------------- | ---------------------------------------- | ------------------------------------- |
-| Carpet                                         | 0.983                                    | -                                     |
-| Grid                                           | 0.958                                    | -                                     |
-| Leather                                        | 0.983                                    | -                                     |
-| Tile                                           | 0.917                                    | -                                     |
-| Wood                                           | 0.923                                    | -                                     |
-| **All texture classes**                        | **0.9528**                               | -                                     |
-| Bottle                                         | 0.973                                    | -                                     |
-| Cable                                          | 0.972                                    | -                                     |
-| Capsule                                        | 0.981                                    | -                                     |
-| Hazelnut                                       | 0.970                                    | -                                     |
-| Metal Nut                                      | 0.955                                    | -                                     |
-| Pill                                           | 0.953                                    | -                                     |
-| Screw                                          | 0.977                                    | -                                     |
-| Toothbrush                                     | 0.984                                    | -                                     |
-| Transistor                                     | 0.982                                    | -                                     |
-| Zipper                                         | 0.963                                    | -                                     |
-| **All object classes**                         | **0.9701**                               | -                                     |
-| **<span style="color:red">All classes</span>** | **<span style="color:red">0.965</span>** | -                                     |
+| MVTec AD class          | EfficientNet-B5<br />(This code) | EfficientNet-B5<br />(Original Paper) |
+| ----------------------- | -------------------------------- | ------------------------------------- |
+| Carpet                  | 0.943                            | -                                     |
+| Grid                    | 0.883                            | -                                     |
+| Leather                 | 0.947                            | -                                     |
+| Tile                    | 0.894                            | -                                     |
+| Wood                    | 0.868                            | -                                     |
+| **All texture classes** | **0.907**                        | -                                     |
+| Bottle                  | 0.944                            | -                                     |
+| Cable                   | 0.936                            | -                                     |
+| Capsule                 | 0.977                            | -                                     |
+| Hazelnut                | 0.951                            | -                                     |
+| Metal Nut               | 0.955                            | -                                     |
+| Pill                    | 0.939                            | -                                     |
+| Screw                   | 0.962                            | -                                     |
+| Toothbrush              | 0.975                            | -                                     |
+| Transistor              | 0.974                            | -                                     |
+| Zipper                  | 0.934                            | -                                     |
+| **All object classes**  | **0.9547**                       | -                                     |
+| **All classes**         | **0.9388**                       | -                                     |
 
 In the original paper, no Pixel-level anomaly localization results are presented.
 
 So, I can't compare this result with original paper's result.
 
+Compared with image-level AUROC, pixel-level AUROC is little low.
+
 
 
 * ROC Curve(EfficientNet-B5)
 
-![roc_curve](https://user-images.githubusercontent.com/57930520/125163143-c0d6aa00-e1c6-11eb-9543-4f7068ce9f52.png)
+![roc_curve (1)](https://user-images.githubusercontent.com/57930520/125718833-e485617b-2527-4ca9-8824-cfe6e06e4356.png)
 
 
 

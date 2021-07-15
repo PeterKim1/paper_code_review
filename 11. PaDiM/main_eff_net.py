@@ -51,14 +51,7 @@ def main():
 
     # set model's intermediate outputs
     outputs = []
-
-    def hook(module, input, output):
-        outputs.append(output)
-
-    model._blocks[7].register_forward_hook(hook) # layer 7
-    model._blocks[20].register_forward_hook(hook) # layer 20
-    model._blocks[26].register_forward_hook(hook) # layer 26
-
+    
     os.makedirs(os.path.join(args.save_path, 'temp_%s' % args.arch), exist_ok=True)
     fig, ax = plt.subplots(1, 2, figsize=(20, 10))
     fig_img_rocauc = ax[0]
@@ -84,7 +77,11 @@ def main():
 
                 # model prediction
                 with torch.no_grad():
-                    _ = model(x.to(device))
+                    endpoints = model.extract_endpoints(x.to(device))
+
+                outputs.append(endpoints['reduction_2']) # patch embedding vector from level 2
+                outputs.append(endpoints['reduction_4']) # patch embedding vector from level 4
+                outputs.append(endpoints['reduction_5']) # patch embedding vector from level 5
 
                 # get intermediate layer outputs
                 for k, v in zip(train_outputs.keys(), outputs):
@@ -94,6 +91,7 @@ def main():
                 outputs = []
 
 
+            
             for k, v in train_outputs.items():
                 train_outputs[k] = torch.cat(v, 0)
 
@@ -103,32 +101,36 @@ def main():
 
             for layer_name in ['layer2', 'layer3']:
                 # layer2 : (N, 176, 14, 14)
-                # lyaer3 : (N, 176, 14, 14)
+                # lyaer3 : (N, 512, 7, 7)
                 embedding_vectors = embedding_concat(embedding_vectors, train_outputs[layer_name])
 
-            # print("Final embedding: ", embedding_vectors.shape) # (N, 392, 56, 56) > 40+176+176
+            # print("Final embedding: ", embedding_vectors.shape) # (N, 728, 56, 56) > 40+176+176
 
             # calculate multivariate Gaussian distribution
             B, C, H, W = embedding_vectors.size()
-            embedding_vectors = embedding_vectors.view(B, C, H * W) # (N, 392, 56*56)
-            mean = torch.mean(embedding_vectors, dim=0).numpy() # (392, 56*56)
-            cov = torch.zeros(C, C, H * W).numpy() # (392, 392, 56*56)
+            embedding_vectors = embedding_vectors.view(B, C, H * W) # (N, 728, 56*56)
+            mean = torch.mean(embedding_vectors, dim=0).numpy() # (728, 56*56)
+            cov = torch.zeros(C, C, H * W).numpy() # (728, 728, 56*56)
             I = np.identity(C)
             for i in range(H * W):
                 cov[:, :, i] = np.cov(embedding_vectors[:, :, i].numpy(), rowvar=False) + 0.01 * I
 
             # save learned distribution
             train_outputs = [mean, cov]
-            with open(train_feature_filepath, 'wb') as f:
-                pickle.dump(train_outputs, f)
+            # Can't save Gaussian parameters as pickle file, because this data is very heavy. 
+            #with open(train_feature_filepath, 'wb') as f:
+            #    pickle.dump(train_outputs, f)
         else:
-            print('load train set feature from: %s' % train_feature_filepath)
-            with open(train_feature_filepath, 'rb') as f:
-                train_outputs = pickle.load(f)
+            pass
+            #print('load train set feature from: %s' % train_feature_filepath)
+            #with open(train_feature_filepath, 'rb') as f:
+            #    train_outputs = pickle.load(f)
+
 
         gt_list = [] 
         gt_mask_list = [] 
-        test_imgs = [] 
+        test_imgs = []
+        outputs = []
 
         # extract test set features
         for (x, y, mask) in tqdm(test_dataloader, '| feature extraction | test | %s |' % class_name):
@@ -138,7 +140,11 @@ def main():
 
             # model prediction
             with torch.no_grad():
-                _ = model(x.to(device))
+                endpoints_test = model.extract_endpoints(x.to(device))
+
+            outputs.append(endpoints_test['reduction_2']) # patch embedding vector from level 2
+            outputs.append(endpoints_test['reduction_4']) # patch embedding vector from level 4
+            outputs.append(endpoints_test['reduction_5']) # patch embedding vector from level 5
 
             # get intermediate layer outputs
             for k, v in zip(test_outputs.keys(), outputs):
@@ -156,8 +162,8 @@ def main():
             embedding_vectors = embedding_concat(embedding_vectors, test_outputs[layer_name])
         
         # calculate distance matrix
-        B, C, H, W = embedding_vectors.size() # (N, 392, 56, 56)
-        embedding_vectors = embedding_vectors.view(B, C, H * W).numpy() # (N, 392, 56*56)
+        B, C, H, W = embedding_vectors.size() # (N, 728, 56, 56)
+        embedding_vectors = embedding_vectors.view(B, C, H * W).numpy() # (N, 728, 56*56)
         dist_list = []
         for i in range(H * W):
             mean = train_outputs[0][:, i]
@@ -188,6 +194,8 @@ def main():
         # calculate image-level ROC AUC score
         img_scores = scores.reshape(scores.shape[0], -1).max(axis=1) # test image에 대한 scores
         gt_list = np.asarray(gt_list)
+        print("gt_list", gt_list.shape)
+        print("img_scores: ", img_scores.shape)
         fpr, tpr, _ = roc_curve(gt_list, img_scores) # fpr, tpr, thres
         img_roc_auc = roc_auc_score(gt_list, img_scores) # auroc 값
         total_roc_auc.append(img_roc_auc)
