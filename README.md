@@ -74,5 +74,7 @@
 
 11. PaDiM: a Patch Distribution Modeling Framework for Anomaly Detection and Localization(2020)
 
-    [paper review](https://cumulu-s.tistory.com/44)
+    [paper review](https://cumulu-s.tistory.com/44) / [code review](https://cumulu-s.tistory.com/45)
+
+
 
