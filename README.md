@@ -78,3 +78,7 @@
 
 
 
+12. MobileNets: Efficient Convolutional Neural Networks for Mobile Vision Applications(MobileNetV1)(2017)
+
+    [paper review](https://cumulu-s.tistory.com/46)
+
